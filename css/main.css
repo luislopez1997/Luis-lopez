@@ -1,18 +1,20 @@
 *{
+    user-select: none;
     scroll-behavior: smooth;
-    --colorPrincipal:#08c0ab;
+    --colorPrincipal:#68f9e8;
     --colorSecundario:#0af1d6;
     --colorbtn:#023a33;
-    --colorTexto:#1ef6dd;
+    --colorTexto:#022723;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    color: #022723;
+    color: var(--colorTexto);
 }
 body{
     background: var(--colorPrincipal);
 }
+/* cabecera de la web */
 header{
     background:var(--colorSecundario);
     width: 100%;
@@ -20,9 +22,9 @@ header{
     position: fixed;
     height: 3rem;
     border-bottom: 1px solid;
-}
-header h2{
     text-align: center;
+    z-index: 999;
+    top: 0;
 }
 #btn_amburguesa{
     position: fixed;
@@ -43,7 +45,7 @@ nav{
     left: 0;
     right: 0;
     height:max-content;
-    background: var(--colorPrincipal);
+    background: var(--colorSecundario);
     position: fixed;
     width: 100%;
     font-size: 1.5rem;
@@ -57,19 +59,74 @@ nav a{
     padding: 10px;
 }
 nav a:hover{
-    background:rgba(30,246,221,.3)
+    background:rgba(30,246,221)
 }
 section{
     height: 100vh;
     text-align: center;
+    padding-top:4rem ;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 80%;
 }
 .toggle_btn_amburguesa{
     display: block;
 }
+/* Sobre mi */
+#sobre_mi{
+    
+}
+#sobre_mi img{
+    display: block;
+    margin-top: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+/* Mis proyectos */
+#proyectos{
+    
+}
+/*Contacto*/
+#contacto{
+    
+}
+/*Pie de pagina*/
+footer{
+    width: 100%;
+    height: 4rem;
+    background: rgb(24, 175, 24);
+
+}
 /* Responsive design */
-@media screen and (orientation:landscape) {
-    header{
-    }
-    nav{
-    }
+/*Dispositivos moviles pequeños*/
+@media screen and (min-width:320px) {
+    
+}
+/*Dispositivos moviles medianos*/
+@media screen and (min-width:375px) {
+  
+}
+/*Dispositivos moviles grandes*/
+@media screen and (min-width:425px) {
+    
+}
+/*Escritorio*/
+@media screen and (min-width:1200px) {
+    
+}
+
+
+
+#prueba{
+    border: 2px solid green;
+    margin-top: 1vh;
+    height:max-content;
+}
+#prueba img{
+    margin: 0;
+    width: 100%;
 }
