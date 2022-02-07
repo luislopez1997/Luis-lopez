@@ -1,106 +1,176 @@
 *{
-    user-select: none;
     scroll-behavior: smooth;
-    --colorPrincipal:#68f9e8;
-    --colorSecundario:#0af1d6;
-    --colorbtn:#023a33;
-    --colorTexto:#022723;
+    --colorPrincipal:#521f15;
+    --colorSecundario:#6c2e1d;
+    --colorTerceario:#c67232;
+    --colorbtn:#944b27;
+    --colorTexto:#e7a13a;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--colorTexto);
+    /*
+    Paleta de colores usada:
+    Principal|Secundario|Botones|Terceario|Texto
+    #521f15  |#6c2e1d   |#944b27|#c67232  |#e7a13a
+    */
 }
 body{
-    background: var(--colorPrincipal);
+    background: var(--colorSecundario);
 }
-/* cabecera de la web */
+/*Cabecera*/
 header{
-    background:var(--colorSecundario);
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid var(--colorTexto);
+    justify-content: space-between;
     width: 100%;
-    padding: 10px;
-    position: fixed;
+    background: var(--colorPrincipal);
     height: 3rem;
-    border-bottom: 1px solid;
-    text-align: center;
-    z-index: 999;
-    top: 0;
+    position: fixed;
+}
+header h2{
+    display: inline-block;
+}
+/*Mi logo*/
+#logo img{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
 }
 #btn_amburguesa{
-    position: fixed;
-    top: .5vh;
-    right: 1vh;
-    width: 2.5rem;
-    height: 2.5rem;
+    height: 2rem;
+    width: 2rem;
     border-radius: 50%;
-    cursor: pointer;
     background: var(--colorbtn);
+    border: 1px thin solid;
+    margin-right: .2rem;
 }
+/*Btn amburguesa*/
 #btn_amburguesa span{
-    transform: scale(1.3);
-    color: var(--colorSecundario);
+    color: var(--colorTexto);
 }
+/*Barra de navegación*/
 nav{
-    top: 3rem;
-    left: 0;
-    right: 0;
-    height:max-content;
-    background: var(--colorSecundario);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--colorSecundario);
+    display: none;
     position: fixed;
     width: 100%;
-    font-size: 1.5rem;
-    border-bottom: 1px solid;
-    display: none;
+    top: 3rem;
 }
 nav a{
-    display: block;
-    text-align: center;
     text-decoration: none;
+    color: var(--colorTexto);
+    width: 100%;
+    text-align: center;
     padding: 10px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid;
 }
 nav a:hover{
-    background:rgba(30,246,221)
+    background: #5f281d;
+    color: var(--colorTexto);
 }
-section{
-    height: 100vh;
-    text-align: center;
-    padding-top:4rem ;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    width: 80%;
-}
+
+/*Toggle btn amburguesa*/ 
 .toggle_btn_amburguesa{
     display: block;
 }
-/* Sobre mi */
-#sobre_mi{
-    
+#sobre_mi,#proyectos,#contacto{
+    padding-top: 3rem;
+    width: 80%;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
 }
-#sobre_mi img{
-    display: block;
-    margin-top: 2rem;
+/*sección sobre mi*/
+#sobre_mi{
+    border-bottom: 1px solid;
+}
+.contenedor_foto_perfil{
+    width: 80%;
     margin-right: auto;
     margin-left: auto;
-    width: 100%;
-    height: 300px;
-    object-fit: contain;
 }
-/* Mis proyectos */
+.contenedor_foto_perfil img{
+    width:100%;
+    display: block;
+}
+/*sección proyectos*/
 #proyectos{
-    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-content: flex-start;
+    text-align: center;
+    border-bottom: 1px solid;
 }
-/*Contacto*/
-#contacto{
-    
+#proyectos div{
+    flex-basis: 100px;
+    background-color: #e7a13a;
+    border: 1px solid black;
+    border-radius: 5px;
 }
-/*Pie de pagina*/
-footer{
+#proyectos div img{
     width: 100%;
-    height: 4rem;
-    background: rgb(24, 175, 24);
-
 }
+/*sección contacto*/
+#contacto{
+ text-align: center;
+}
+/*Formulario de contacto*/
+#formulario_contacto{
+    height:max-content;
+    padding: 10px;
+}
+input::placeholder,textarea::placeholder{
+    text-align: center;
+    color: var(--colorTexto);
+}
+input[type='text'],input[type='email'],textarea{
+    background: var(--colorTerceario);
+    border: none;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    color: var(--colorTexto);
+    border-bottom: 2px solid;
+}
+#formulario_contacto_enviar{
+    background: var(--colorbtn);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+    border: 1px thin solid;
+}
+#formulario_contacto_texto{
+    min-height: 200px;
+    max-height: 200px;
+}
+#formulario_contacto_texto:focus >#formulario_contacto_texto{
+    border: 2px solid red;
+}
+/*Redes sociales*/
+#redes_sociales{
+    height: 15vh;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+#redes_sociales img{
+    width: 1.5rem;
+}
+
 /* Responsive design */
 /*Dispositivos moviles pequeños*/
 @media screen and (min-width:320px) {
@@ -115,18 +185,8 @@ footer{
     
 }
 /*Escritorio*/
-@media screen and (min-width:1200px) {
-    
-}
-
-
-
-#prueba{
-    border: 2px solid green;
-    margin-top: 1vh;
-    height:max-content;
-}
-#prueba img{
-    margin: 0;
-    width: 100%;
+@media screen and (min-width:1024px) {
+    .contenedor_foto_perfil img{
+        display: none;
+    }
 }
