@@ -11,56 +11,78 @@
    <title>Luis lópez</title>
 </head>
 <body>
+    <!--cabecera de la web-->
     <header>
+        <!--Mi logo-->
+        <div id="logo">
+            <img id="mono" src="./img/mono.png" alt="logo">
+        </div>
+        <!--Titulo principal-->
         <h2>Luis lópez</h2>
-         <nav class="barra_navegacion">
-             <a href="#sobre_mi">Sobre mi</a>
-             <a href="#proyectos">Proyectos</a>
-             <a href="#contacto">Contacto</a>
-         </nav>
          <button id="btn_amburguesa">
             <span class="material-icons amburguesa">menu</span>
          </button>
     </header>
+    <!--Menu de navegacion-->
+    <nav class="barra_navegacion">
+        <a href="#sobre_mi">Sobre mi</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <!--Contenido principal-->
     <main>
+        <!--Sección sobre mi-->
         <section id="sobre_mi">
-            <div class="sec">
-                <p>
-                    Mi nombre es luis lópez, soy un estudiante de analista programador,
-                    me gusta aprender nuevas tecnologías y desarrollar proyectos,
-                    <b>me especializo en desarrollo web front-end</b>, manejo tecnologias como
-                    HTML5, CSS3, JavaScript, Bootstrap, tambien me gustan los deportes y las peliculas.
-                </p>
+            <p>
+                Mi nombre es luis lópez, soy un estudiante de analista programador,
+                me gusta aprender nuevas tecnologías y desarrollar proyectos,
+                <b>me especializo en desarrollo web front-end</b>, manejo tecnologias como
+                HTML5, CSS3, JavaScript, Bootstrap, tambien me gustan los deportes y las peliculas.
+            </p>
+            <div class="contenedor_foto_perfil">
+                <img src="./img/capitan.png" alt="luis lópez">
             </div>
-                <div class="contenedor_foto_perfil">
-                    <img src="./img/capitan.png" alt="luis lópez">
-                </div>
         </section>
+        <!--Sección Proyectos-->
         <section id="proyectos">
-            <div id="prueba">
-                <img src="./img/proyectos.jpg" alt="Poryecto 1">
+            <h2>Mis proyectos</h2>
+            <div id="proyecto1">
+                <img src="./img/proyectos.jpg" alt="">
             </div>
-            <div id="prueba">
-                <img src="./img/proyectos.jpg" alt="Poryecto 1">
+            <div id="proyecto2">
+                <img src="./img/proyectos.jpg" alt="">
+                
             </div>
-            
-            <div id="prueba">
-                <img src="./img/proyectos.jpg" alt="Poryecto 1">
+            <div id="proyecto3">
+                <img src="./img/proyectos.jpg" alt="">
             </div>
         </section>
+        <!--Sección Contacto-->
         <section id="contacto">
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                <input type="submit" class="btn btn-primary" value="Enviar">
-              </div>
+            <h2>Formulario de contacto</h2>
+           <form id="formulario_contacto">
+               <input type="text" name="nombre" id="formulario_contacto_nombre" placeholder="Juan pérez" required maxlength="30">
+               <input type="email" name="correo" id="formulario_contacto_correo" placeholder="hola@gmail.com" required maxlength="30">
+               <textarea name="texto" id="formulario_contacto_texto" cols="30" rows="10" maxlength="200" placeholder="Su mensaje a enviar" required></textarea>
+               <input type="submit" value="enviar" id="formulario_contacto_enviar">
+           </form>
+           <div id="redes_sociales">
+               <a href="https://www.linkedin.com/in/luis-lopez-075551201/" target="_blank">
+                     <img id="linkedin" src="./img/linkedin.png" alt="luis lópez linkedin" target="_blank">
+               </a>
+               <a href="https://www.facebook.com/profile.php?id=100026284936695" target="_blank">
+                    <img id="facebook" src="./img/facebook.png" alt="luis lópez facebook">
+                </a>
+                <a href="https://twitter.com/41_zacarias" target="_blank">
+                    <img id="twitter" src="./img/twitter.png" alt="luis lópez twitter">
+               </a>
+               <a href="https://github.com/luislopez1997" target="_blank">
+                <img id="github" src="./img/github.png" alt="luis lópez github">
+           </a>
+           </div>
         </section>
     </main>
-    
+    <!--Script principal-->
     <script src="./js/index.js" type="module"></script>
 </body>
 </html>
