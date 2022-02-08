@@ -25,6 +25,7 @@ header{
     flex-direction: row;
     border-bottom: 1px solid var(--colorTexto);
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     background: var(--colorPrincipal);
     height: 3rem;
