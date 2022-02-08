@@ -78,7 +78,7 @@ nav a:hover{
 
 /*Toggle btn amburguesa*/ 
 .toggle_btn_amburguesa{
-    display: block;
+    display: flex;
 }
 #sobre_mi,#proyectos,#contacto{
     padding-top: 3rem;
